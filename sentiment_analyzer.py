@@ -12,16 +12,12 @@ from nltk.stem import WordNetLemmatizer
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # Download required NLTK resources
-try:
-    nltk.data.find('tokenizers/punkt')
-    nltk.data.find('corpora/stopwords')
-    nltk.data.find('corpora/wordnet')
-    nltk.data.find('sentiment/vader_lexicon.zip')
-except LookupError:
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    nltk.download('wordnet')
-    nltk.download('vader_lexicon')
+# Download all required resources to ensure they're available
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('vader_lexicon')
+nltk.download('punkt_tab')
 
 # Initialize NLTK components
 stop_words = set(stopwords.words('english'))
@@ -127,8 +123,8 @@ def preprocess_text(text):
     # Remove punctuation
     text = text.translate(str.maketrans('', '', string.punctuation))
     
-    # Tokenize text
-    tokens = word_tokenize(text)
+    # Simple tokenization by splitting on whitespace instead of using word_tokenize
+    tokens = text.split()
     
     # Remove stopwords and lemmatize
     filtered_tokens = [lemmatizer.lemmatize(token) for token in tokens if token not in stop_words]
