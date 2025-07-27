@@ -29,3 +29,27 @@ This application analyzes sentiment in forex news and social media data to provi
 - **Forex Data**: CSV file with columns 'date', 'open', 'high', 'low', 'close'
 
 ## Installation and Running
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/forex-sentiment-analyzer.git
+    cd forex-sentiment-analyzer
+    ```
+
+2.  **Create a virtual environment and activate it:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3.  **Install the dependencies:**
+    ```bash
+    pip install -e .
+    ```
+
+4.  **Run the application:**
+    ```bash
+    streamlit run app.py
+    ```
+
+    The application will be available at `http://localhost:8501`.
