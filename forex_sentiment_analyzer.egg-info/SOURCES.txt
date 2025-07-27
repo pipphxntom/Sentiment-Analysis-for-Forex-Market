@@ -1,0 +1,13 @@
+README.md
+app.py
+backtester.py
+data_processor.py
+pyproject.toml
+sentiment_analyzer.py
+setup.py
+utils.py
+forex_sentiment_analyzer.egg-info/PKG-INFO
+forex_sentiment_analyzer.egg-info/SOURCES.txt
+forex_sentiment_analyzer.egg-info/dependency_links.txt
+forex_sentiment_analyzer.egg-info/requires.txt
+forex_sentiment_analyzer.egg-info/top_level.txt
